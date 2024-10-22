@@ -1,0 +1,12 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 7071
+
+spring:
+  data:
+    mongodb:
+      uri: "mongodb+srv://admin:admin@ust-training.pc218.mongodb.net/?retryWrites=true&w=majority&appName=UST-Training"
+      database: books
