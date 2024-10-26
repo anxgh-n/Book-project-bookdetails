@@ -18,6 +18,11 @@ public class BookController {
         return bookService.addBook(book);
     }
 
+    @GetMapping("/book")
+    public List<Book> findAllBooks(){
+        return bookService.findAllBooks();
+    }
+
     @GetMapping("/book/{bookAuthorId}")
     public List<Book> getAllBooks(@PathVariable String bookAuthorId){
         return bookService.getAllBooks(bookAuthorId);

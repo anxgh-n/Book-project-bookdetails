@@ -17,8 +17,12 @@ public class BookService {
         return bookRepo.save(book);
     }
 
+    public List<Book> findAllBooks(){
+        return bookRepo.findAll();
+    }
+
     public List<Book> getAllBooks(String bookAuthorId){
-        return bookRepo.findByAuthorId(bookAuthorId);
+        return bookRepo.findByBookAuthorId(bookAuthorId);
 
     }
 

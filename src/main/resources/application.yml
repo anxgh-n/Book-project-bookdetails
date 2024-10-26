@@ -4,21 +4,16 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 7071
+  port: 7072
 spring:
   application:
     name: bookdetails
-  datasource:
-    url: jdbc:h2:mem:db1
-    username: sa
-    password: password
-    driver-class-name: org.h2.Driver
+  data:
+    mongodb:
+      uri: mongodb+srv://anagh11:anagh11@bookcluster.dl7kn.mongodb.net/?retryWrites=true&w=majority&appName=BookCluster
+      database: bookdbbook
 
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-      show-sql: true
 
 
 

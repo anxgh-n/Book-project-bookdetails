@@ -1,14 +1,13 @@
 package com.example.bookdetails.Repository;
 
 import com.example.bookdetails.Model.Book;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
 
 import java.util.List;
 
-@Repository
-public interface BookRepo extends JpaRepository<Book,Integer> {
 
-    List<Book> findByAuthorId(String bookAuthorId);
+public interface BookRepo extends MongoRepository<Book,Integer> {
 
+    List<Book> findByBookAuthorId(String bookAuthorId);
 }

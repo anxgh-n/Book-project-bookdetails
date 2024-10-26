@@ -1,19 +1,19 @@
 package com.example.bookdetails.Model;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
-@Entity
+@Document
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "book")
+
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bookId;
     private String bookTitle;
     private String bookPrice;
