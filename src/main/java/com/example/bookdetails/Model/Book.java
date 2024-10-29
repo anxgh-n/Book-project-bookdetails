@@ -14,7 +14,7 @@ import java.time.LocalDate;
 
 public class Book {
     @Id
-    private int bookId;
+    private String bookId;
     private String bookTitle;
     private String bookPrice;
     private LocalDate bookPublished;
